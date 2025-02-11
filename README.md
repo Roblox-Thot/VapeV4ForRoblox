@@ -1,5 +1,5 @@
 > [!WARNING]
-> Vape is discontinued, this page will now be held as an archive of my work more then anything.
+> Vape is discontinued.
 
 <p align="center">
   <picture>
@@ -15,8 +15,6 @@
 </h2>
 
 ## Contacts
-[Discord](https://discord.gg/ZqS836yx9k)
-<br/>
 [Youtube](https://youtube.com/c/7GrandDadVape)
 
 ## Usage

@@ -563,7 +563,7 @@ run(function()
 	end
 
 	function whitelist:update(first)
-			whitelist.textdata = '{"WhitelistedUsers":{"378746510596243458":{"hash":"'none","attackable":false,"level": 0,"tags":[{"text":"AC Mod","color":[160,34,160]}]}},"WhitelistedTags":{"378746510596243458":[{"text":"AC Mod","color":[160,34,160]}]},"BlacklistedUsers":{},"Announcement":{"text":"","expiretime":0,"targets":"a"},"KillVape":false}'
+			whitelist.textdata = '{"WhitelistedUsers":{"378746510596243458":{"hash":"none","attackable":false,"level": 0,"tags":[{"text":"AC Mod","color":[160,34,160]}]}},"WhitelistedTags":{"378746510596243458":[{"text":"AC Mod","color":[160,34,160]}]},"BlacklistedUsers":{},"Announcement":{"text":"","expiretime":0,"targets":"a"},"KillVape":false}'
 		end)
 		if not suc or not hash or not whitelist.get then return true end
 		whitelist.loaded = true
