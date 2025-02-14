@@ -563,7 +563,14 @@ run(function()
 	end
 
 	function whitelist:update(first)
-			whitelist.textdata = '{"WhitelistedUsers":{"378746510596243458":{"hash":"none","attackable":false,"level": 0,"tags":[{"text":"AC Mod","color":[160,34,160]}]}},"WhitelistedTags":{"378746510596243458":[{"text":"AC Mod","color":[160,34,160]}]},"BlacklistedUsers":{},"Announcement":{"text":"","expiretime":0,"targets":"a"},"KillVape":false}'
+		local suc = pcall(function()
+			local _, subbed = pcall(function()
+				return game:HttpGet('https://github.com/7GrandDadPGN/whitelists')
+			end)
+			local commit = subbed:find('currentOid')
+			commit = commit and subbed:sub(commit + 13, commit + 52) or nil
+			commit = commit and #commit == 40 and commit or 'main'
+			whitelist.textdata = game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/whitelists/'..commit..'/PlayerWhitelist.json', true)
 		end)
 		if not suc or not hash or not whitelist.get then return true end
 		whitelist.loaded = true
